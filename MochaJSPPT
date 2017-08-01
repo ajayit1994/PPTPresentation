@@ -1,0 +1,163 @@
+Title : - MochaJS (Unit testing in javascript)
+
+Table Of Content
+----------------------------
+|-Unit Testing
+	|-Overview
+	|-Test driven and behavior driven development
+
+|-Mocha & Chai
+	|-Overview & Installation
+	|-Running Simple Tests
+
+|- Practical demo of Mocha
+
+
+What is Unit Testing?
+----------------------------------
+A unit test is a piece of code written by a developer that exercises a very small, specific area of functionality of the code being tested.
+
+Manual Testing
+--------------------------------
+
+Manual test are less efficient
+
+-> Not repetable
+-> Not on all your code
+-> Not structured
+
+function sum(numbers) {
+	var sum = 0;
+	for(var i = 0 ;i < numbers.length; i++) {
+		sum += numbers[i]
+	}
+	return sum;
+}
+
+void testSum() {
+	if(sum([1,2]) != 3) {
+		throw new Error("1+2 != 3")
+	}
+	if(sum([-2]) != -2) {
+		throw new Error("[-2] != -2")
+	} 
+	if(sum([]) != 0) {
+		throw new Error("0 != 0")
+	}
+}
+
+
+Why Unit Testing?
+--------------------------------
+Unit tests dramatically decrease the number of defects in the code
+Unit tests reduce the cost of change
+Unit tests allow refactoring
+Unit test decrease the defect-injection rate due to refactoring/ changes
+
+
+Unit Testing in Javascript
+-----------------------------------
+
+There are too many frameworks for unit testing in javascript
+
+Some use TDD
+Other use BDD
+
+Some of the frameworks
+	TDD - Mocha
+	BDD - Jasmine & Mocha
+
+
+What is TDD ? 
+----------------------
+
+What is BDD ?
+----------------------
+
+
+Jasmine
+------------------------
+
+Jasmine is an open source testing framework
+	-> Can run in both browser and on NodeJS
+	-> Use BDD
+	-> Widely used
+	-> Introduces in 2008
+Jasmine has the following features
+	-> Easy to read syntax
+	-> Testing async code
+	-> DOM testing
+
+
+Mocha
+-------------------------
+Mocha is the new kid on the block
+	-> Open source framwork, introduces in 2012
+	-> Can run in both the browser and on Node Js
+	-> plugins for test syntax, spies , etc..
+
+Mocha has following features:
+	-> Easy-to-read syntax
+	-> Testing async code
+	-> Supports both BDD and TDD
+	-> The most used plugin for syntax is Chai.js
+
+
+Testing with Mocha
+---------------------------
+Mocha is feature rich franework for testing javascript
+	-> Run in both browser and on Node js
+	-> Can test async code
+	-> Compatible with Karma & other test runners
+	-> Mostly used with chai.js
+	-> Start writing tests
+
+
+
+Mocha With Chai
+--------------------------
+Mocha is made pluggable
+	-> Can use almost any assertion framework
+	-> The most used in chai.js
+Chai.js uses behaviour-driven development
+
+To use Chai in Mocha, do the following
+	-> Install Chai (npm install chai)
+
+Chai has three assertion styles
+
+	- Assert Style
+	assert.equal(person.firstName(), 'peter')
+
+	- Expect style
+	expect(person.firstName()).to.equal('Peter')
+
+	-Should Style
+	person.firstName().should.equal('Peter')
+
+Chai.js expect assertion style has fluent and expressive syntax
+
+expect(person.firstname()).to.equal('Peter')
+expect(person).to.be.a('Person');
+expect(person).not.to.be.null
+expect(person).to.be.ok
+expect(person).not.to.be.ok
+expect(function () {
+	
+}).to.throw(ReferenceError)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
